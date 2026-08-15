@@ -94,7 +94,7 @@
     color:#fff;
 
     background:
-    linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),
+    linear-gradient(rgba(0,0,0,.40),rgba(0,0,0,.40)),
     url("Background.jpg");
 
     background-size:cover;
@@ -340,317 +340,659 @@
 }
 
 /* ==========================================
-   TENTANG
-========================================== */
-
-#tentang p{
-    font-size:18px;
-    line-height:1.9;
-}
-
-#tentang i{
-    margin-right:8px;
-    font-size:20px;
-}
-
-/* ==========================================
-   RESPONSIVE
-========================================== */
-
-@media (max-width:992px){
-
-    .banner{
-        height:80vh;
-        min-height:650px;
-    }
-
-   .banner h1{
-    font-size:2rem;
-    line-height:1.25;
-    margin-bottom:20px;
-}
-
-}
-
-.banner{
-    min-height:90vh;
-    padding:100px 20px 50px;
-    background-position:65% center;
-}
-
-    .navbar{
-        padding:12px 0;
-    }
-
-    .navbar-brand{
-        font-size:28px;
-    }
-
-    .logo{
-        height:42px;
-    }
-
-    .banner{
-        height:auto;
-        min-height:100vh;
-        padding:120px 20px 70px;
-    }
-
-    .banner h5{
-        font-size:12px;
-        padding:10px 20px;
-        letter-spacing:2px;
-    }
-
-    .banner h1{
-        font-size:2.8rem;
-        line-height:1.2;
-        margin-bottom:25px;
-    }
-
-    .banner .btn{
-        width:100%;
-        padding:15px;
-        font-size:17px;
-        margin-bottom:15px;
-    }
-
-    .banner .btn:last-child{
-        margin-bottom:0;
-    }
-
-@media (max-width:480px){
-
-    .banner{
-        padding:110px 18px 60px;
-    }
-
-    .banner h1{
-        font-size:1.8rem;
-        line-height:1.2;
-    }
-
-    .banner h5{
-        font-size:11px;
-        padding:8px 18px;
-    }
-
-    .navbar-brand{
-        font-size:26px;
-    }
-
-    .logo{
-        height:38px;
-    }
-
-}
-.banner .btn{
-    width:90%;
-    max-width:320px;
-}
-/* ==========================================
-   TENTANG
+   TENTANG BIOJP
 ========================================== */
 
 #tentang{
+    position:relative;
+    min-height:auto;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    padding:70px 0;
 
-    padding:100px 0;
-    background:#fff;
+    background:
+    linear-gradient(
+        rgba(255,255,255,.10),
+        rgba(255,255,255,.10)
+    ),
+    url("Background.jpg");
 
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
-#tentang h2{
+#tentang .container{
+    position:relative;
+    z-index:2;
+}
 
-    font-size:2.2rem;
-    font-weight:700;
+/* ===========================
+        HEADER
+=========================== */
+
+.about-badge{
+    display:inline-block;
+    background:#198754;
+    color:#fff;
+    padding:12px 32px;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+.about-badge i{
+    margin-right:8px;
+}
+
+.section-title{
+    font-size:48px;
+    font-weight:800;
     color:#222;
+    margin-bottom:12px;
+    line-height:1.2;
+}
 
+.section-title span{
+    color:#198754;
+}
+
+.section-subtitle{
+    max-width:850px;
+    margin:0 auto 20px;
+    font-size:18px;
+    color:#222;
+    line-height:1.7;
 }
 
 .garis{
-
     width:90px;
-    border:3px solid #198754;
+    height:4px;
+    background:#198754;
+    border:none;
+    border-radius:50px;
     opacity:1;
-    border-radius:20px;
+}
 
+/* ===========================
+        FOTO
+=========================== */
+
+.about-image{
+    text-align:center;
 }
 
 .gambar-produk{
-
-    max-width:360px;
-    transition:.4s ease;
-
+    width:100%;
+    max-width:470px;
+    border-radius:25px;
+    box-shadow:0 25px 55px rgba(0,0,0,.18);
+    transition:.45s;
 }
 
 .gambar-produk:hover{
+    transform:translateY(-10px) scale(1.05);
+}
 
-    transform:scale(1.05);
+/* ===========================
+        CARD
+=========================== */
+
+.about-card{
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    padding:40px;
+    border-radius:28px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
+
+    transition:.4s;
+    transform:translateY(-20px);
+}
+
+.about-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 35px 70px rgba(0,0,0,.18);
+}
+
+.about-card h3{
+    font-size:36px;
+    font-weight:800;
+    color:#198754;
+    margin-bottom:18px;
+    line-height:1.25;
+}
+
+.about-card p{
+    font-size:16px;
+    color:#444;
+    line-height:1.7;
+    text-align:left;
+    margin-bottom:14px;
+}
+
+/* ===========================
+      FEATURE BOX
+=========================== */
+
+.feature-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    background:#fff;
+    padding:18px;
+
+    border-radius:18px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+    height:100%;
+}
+
+.feature-box:hover{
+
+    transform:translateY(-8px);
+
+    background:#198754;
+
+    box-shadow:0 20px 40px rgba(25,135,84,.28);
 
 }
-/*==================
-PRODUK
-==================*/
+
+.feature-box i{
+    width:58px;
+    height:58px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:#198754;
+
+    color:#fff;
+
+    font-size:24px;
+
+    transition:.3s;
+}
+
+.feature-box h5{
+
+    margin:0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+.feature-box small{
+
+    font-size:15px;
+
+    line-height:1.7;
+
+    color:#666;
+
+}
+
+.feature-box:hover h5,
+.feature-box:hover small{
+
+    color:#fff;
+
+}
+
+.feature-box:hover i{
+
+    background:#fff;
+
+    color:#198754;
+
+}
+
+/* ===========================
+      TABLET
+=========================== */
+
+@media(max-width:991px){
+
+    #tentang{
+        min-height:auto;
+        padding:90px 0;
+    }
+
+    .section-title{
+        font-size:46px;
+    }
+
+    .section-subtitle{
+        font-size:19px;
+    }
+
+    .gambar-produk{
+        max-width:400px;
+        margin-bottom:40px;
+    }
+
+    .about-card{
+        padding:40px;
+    }
+
+    .about-card h3{
+        font-size:36px;
+    }
+
+}
+
+/* ===========================
+      MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+    #tentang{
+        min-height:auto;
+        padding:70px 0;
+        background-attachment:scroll;
+    }
+
+    .about-badge{
+        font-size:14px;
+        padding:10px 24px;
+    }
+
+    .section-title{
+        font-size:34px;
+        line-height:1.3;
+    }
+
+    .section-subtitle{
+        width:95%;
+        font-size:17px;
+        line-height:1.8;
+    }
+
+    .gambar-produk{
+        max-width:320px;
+        margin-bottom:35px;
+    }
+
+    .about-card{
+        padding:30px;
+    }
+
+    .about-card h3{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .about-card p{
+        font-size:17px;
+        text-align:center;
+        line-height:1.8;
+    }
+
+    .feature-box{
+        min-height:110px;
+        padding:18px;
+    }
+
+    .feature-box h5{
+        font-size:18px;
+    }
+
+    .feature-box small{
+        font-size:14px;
+    }
+
+}
+
+/*=================================
+            PRODUK
+==================================*/
 
 #produk{
+    position:relative; 
+    min-height:auto; 
+    display:flex; 
+    align-items:center; 
+    overflow:hidden; 
+    padding:70px 0;
 
-padding:100px 0;
+    background:
+        linear-gradient(
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.10)
+        ),
+        url("Background.jpg");
 
-background:#ffffff;
-
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
+/* =====================
+      BADGE
+===================== */
+
+.produk-badge{
+    display:inline-block;
+    background:#198754;
+    color:#fff;
+    padding:12px 32px;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:600;
+    letter-spacing:.5px;
+}
+
+/* =====================
+      FOTO
+===================== */
+
+.produk-image{
+    max-width:500px;
+    width:100%;
+    transition:.5s;
+    filter:drop-shadow(0 30px 55px rgba(0,0,0,.20));
+}
+
+.produk-image:hover{
+    transform:translateY(-10px) scale(1.05);
+}
+
+/* =====================
+      CARD
+===================== */
+
 .produk-card{
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
 
-border-radius:20px;
+    padding:40px;
+    border-radius:28px;
 
-transition:.4s;
+    box-shadow:0 25px 60px rgba(0,0,0,.12);
 
+    transition:.4s;
 }
 
 .produk-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 35px 70px rgba(0,0,0,.18);
+}
 
-transform:translateY(-10px);
+/* =====================
+      JUDUL
+===================== */
+
+.produk-card h3{
+    color:#198754;
+    font-size:36px;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+/* =====================
+      DESKRIPSI
+===================== */
+
+.produk-desc{
+    font-size:17px;
+    color:#444;
+    line-height:1.7;
+    text-align:left;
+}
+
+/* =====================
+      LIST
+===================== */
+
+.produk-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.produk-list li{
+    margin-bottom:12px;
+    font-size:16px;
+    color:#444;
+    transition:.3s;
+}
+
+.produk-list li:hover{
+    transform:translateX(6px);
+}
+
+.produk-list i{
+    color:#198754;
+    margin-right:10px;
+    font-size:22px;
+}
+
+/* =====================
+      INFO
+===================== */
+
+.produk-info{
+    background:#f8fdf8;
+    border-radius:18px;
+    padding:20px 24px;
+    margin-top:22px;
+}
+
+.info-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:14px 0;
+    border-bottom:1px solid #e8e8e8;
+}
+
+.info-item:last-child{
+    border:none;
+}
+
+.info-item strong{
+    color:#198754;
+    font-size:17px;
+}
+
+.info-item span{
+    font-size:17px;
+    color:#555;
+}
+
+/* =====================
+      BUTTON
+===================== */
+
+.produk-card .btn{
+    margin-top:10px;
+    padding:12px 30px;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    transition:.35s;
+    box-shadow:0 12px 28px rgba(25,135,84,.25);
+}
+
+.produk-card .btn:hover{
+    transform:translateY(-5px);
+}
+
+/* =====================
+      RESPONSIVE
+===================== */
+
+@media(max-width:991px){
+
+    #produk{
+        min-height:auto;
+        padding:90px 0;
+    }
+
+    .produk-image{
+        max-width:400px;
+        margin-bottom:40px;
+    }
+
+    .produk-card{
+        padding:40px;
+    }
+
+    .produk-card h3{
+        font-size:38px;
+    }
 
 }
 
-.produk-card img{
+@media(max-width:768px){
 
-height:320px;
+    #produk{
+        min-height:auto;
+        padding:70px 0;
+        background-attachment:scroll;
+    }
 
-object-fit:contain;
+    .produk-image{
+        max-width:320px;
+        margin-bottom:35px;
+    }
+
+    .produk-card{
+        padding:30px;
+    }
+
+    .produk-card h3{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .produk-desc{
+        font-size:17px;
+        text-align:center;
+        line-height:1.8;
+    }
+
+    .produk-list li{
+        font-size:16px;
+    }
+
+    .produk-card .btn{
+        width:100%;
+    }
 
 }
 /*========================
 MANFAAT
 =========================*/
-
-#manfaat{
-
-padding:100px 0;
-
-}
-
-.manfaat-card{
-
-border:none;
-
-border-radius:20px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.4s;
-
-}
-
-.manfaat-card:hover{
-
-transform:translateY(-10px);
-
-}
-
-.manfaat-icon{
-
-font-size:55px;
-
-color:#198754;
-
-}
-#manfaat{
+#manfaat{ 
     padding:100px 0;
-    background: linear-gradient(
-        180deg,
-        #f8fdf8 0%,
-        #eef8f0 50%,
-        #ffffff 100%
-    );
+
+    background:
+        linear-gradient(
+            rgba(240,250,243,.10),
+            rgba(240,250,243,.10)
+        ),
+        url("Background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+.manfaat-card{ 
+    border:none; 
+    border-radius:20px; 
+    box-shadow:0 10px 25px rgba(0,0,0,.08); 
+    transition:.4s; 
+}
+
+.manfaat-card:hover{ 
+    transform:translateY(-10px); 
+}
+
+.manfaat-icon{ 
+    font-size:55px; 
+    color:#198754; 
 }
 /*==========================
 CARA PEMAKAIAN
 ===========================*/
 
 #pemakaian{
+    padding:120px 0 100px;
 
-padding:100px 0;
+    background:
+        linear-gradient(
+            rgba(240,250,243,.10),
+            rgba(240,250,243,.10)
+        ),
+        url("Background.jpg");
 
-background:#f8fdf8;
-
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
 }
 
 .langkah-card{
-
-background:#fff;
-
-padding:35px 25px;
-
-border-radius:20px;
-
-box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-transition:.4s;
-
-height:100%;
-
+    background:#fff;
+    padding:35px 25px;
+    border-radius:20px;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
 }
 
 .langkah-card:hover{
-
-transform:translateY(-10px);
-
+    transform:translateY(-10px);
 }
 
 .angka{
-
-width:60px;
-
-height:60px;
-
-background:#198754;
-
-color:#fff;
-
-font-size:26px;
-
-font-weight:bold;
-
-border-radius:50%;
-
-margin:auto;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-margin-bottom:20px;
-
+    width:60px;
+    height:60px;
+    background:#198754;
+    color:#fff;
+    font-size:26px;
+    font-weight:bold;
+    border-radius:50%;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
 }
 
 .langkah-card i{
-
-font-size:45px;
-
-color:#198754;
-
-margin-bottom:20px;
-
+    font-size:45px;
+    color:#198754;
+    margin-bottom:20px;
 }
 
 .langkah-card h5{
-
-font-weight:bold;
-
-margin-bottom:15px;
-
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
 .langkah-card p{
-
-font-size:16px;
-
-line-height:1.7;
-
+    font-size:16px;
+    line-height:1.7;
 }
 /*=========================
 FAQ
@@ -762,16 +1104,37 @@ KONTAK
 ======================================*/
 
 #layanan{
-    background:#f8fff8;
+    position:relative;
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,.10),
+            rgba(255,255,255,.10)
+        ),
+        url("Background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+@media(max-width:768px){
+    #layanan{
+        background-attachment:scroll;
+    }
 }
 
 #layanan h2{
     color:#198754;
-    font-weight:700;
+    font-weight:800;
+    text-shadow:0 1px 2px rgba(0,0,0,.08);
 }
 
 #layanan p{
-    color:#6c757d;
+    color:#3f4f58;
+    font-size:16px;
+    font-weight:500;
 }
 
 /* Garis Judul */
@@ -861,6 +1224,22 @@ KONTAK
    KEUNGGULAN BIOJP
 =========================== */
 
+#keunggulan{
+    padding:100px 0;
+
+    background:
+        linear-gradient(
+            rgba(240,250,243,.10),
+            rgba(240,250,243,.10)
+        ),
+        url("Background.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
 .keunggulan-card{
     border-radius:20px;
     transition:.4s;
@@ -891,3 +1270,6 @@ KONTAK
     font-size:15px;
     line-height:1.8;
 }
+
+
+
